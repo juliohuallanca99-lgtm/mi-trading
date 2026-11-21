@@ -1,0 +1,24 @@
+{
+  "name": "mi-trading (TradingAgents)",
+  "image": "mcr.microsoft.com/devcontainers/python:3.13",
+  "postCreateCommand": "pip install --no-cache-dir -e . && mkdir -p ~/.tradingagents",
+  "remoteEnv": {
+    "TRADINGAGENTS_OUTPUT_LANGUAGE": "Spanish"
+  },
+  "secrets": {
+    "ANTHROPIC_API_KEY": {
+      "description": "API key de Claude (console.anthropic.com). Usa esta u otra de las soportadas."
+    },
+    "OPENAI_API_KEY": {
+      "description": "API key de OpenAI (opcional, si prefieres GPT)."
+    },
+    "GOOGLE_API_KEY": {
+      "description": "API key de Google Gemini (opcional; Gemini tiene un nivel gratuito)."
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python"]
+    }
+  }
+}
